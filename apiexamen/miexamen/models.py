@@ -22,7 +22,7 @@ class Listado( models.Model ):
     id_lista = models.AutoField( primary_key = True )
     nombre_list = models.CharField( max_length = 80, blank = False, null = False )
     usuario = models.ForeignKey( Usuario, blank = False, null = False, on_delete = models.CASCADE )
-    producto = models.ForeignKey( Producto, blank = False, null = False, on_delete = models.CASCADE )
+    producto = models.ManyToManyField( Producto, blank = False, null = False, on_delete = models.CASCADE )
 
     def __str__( self ):
         return self.nombre_list
