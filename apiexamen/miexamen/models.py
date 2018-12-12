@@ -16,7 +16,7 @@ class Usuario( models.Model ):
     correo = models.CharField( max_length = 35, blank = False , null = False )
     contraseña = models.CharField( max_length = 50, blank = False, null = False )
     def __str__( self ):
-        return self.nombre_user
+        return self.id_user
 
 class Listado( models.Model ):
     id_lista = models.AutoField( primary_key = True )
