@@ -21,7 +21,7 @@ class ListadoSerializers( serializers.HyperlinkedModelSerializer ):
     prod = serializers.SlugRelatedField(
         many = True,
         read_only = True,
-        slug_field= 'nombre_prod'
+        slug_field= 'id_prod'
     )
     
     class Meta: 
