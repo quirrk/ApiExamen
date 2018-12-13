@@ -26,4 +26,4 @@ class ListadoSerializers( serializers.HyperlinkedModelSerializer ):
     
     class Meta: 
         model = Listado
-        fields = ('id_lista','nombre_list','usuario','cliente')
+        fields = ('id_lista','nombre_list','usuario','prod')
