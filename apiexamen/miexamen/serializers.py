@@ -18,7 +18,7 @@ class TiendaSerializer( serializers.HyperlinkedModelSerializer ):
 
 class ListadoSerializers( serializers.HyperlinkedModelSerializer ):
     
-    prod = serializers.SlugRelatedField(
+    producto = serializers.SlugRelatedField(
         many = True,
         read_only = True,
         slug_field= 'id_prod'
@@ -26,4 +26,4 @@ class ListadoSerializers( serializers.HyperlinkedModelSerializer ):
     
     class Meta: 
         model = Listado
-        fields = ('id_lista','nombre_list','usuario','prod')
+        fields = ('id_lista','nombre_list','usuario','producto')
