@@ -23,6 +23,12 @@ class ListadoSerializers( serializers.HyperlinkedModelSerializer ):
         read_only = True,
         slug_field= 'id_prod'
     )
+
+    usuario = serializers.SlugRelatedField(
+        many = True,
+        read_only = True,
+        slug_field = 'id_user'
+    )
     
     class Meta: 
         model = Listado
