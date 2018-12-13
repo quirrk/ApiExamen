@@ -20,12 +20,12 @@ class ListadoSerializers( serializers.HyperlinkedModelSerializer ):
     
     producto = serializers.SlugRelatedField(
         many = True,
-        read_only = True,
+        read_only = false,
         slug_field= 'id_prod'
     )
 
     usuario = serializers.SlugRelatedField(
-        read_only = True,
+        read_only = False,
         slug_field = 'id_user'
     )
     
