@@ -25,6 +25,7 @@ class ListadoSerializers( serializers.HyperlinkedModelSerializer ):
     )
 
     usuario = serializers.SlugRelatedField(
+        read_only = True,
         slug_field = 'id_user'
     )
     
